@@ -215,8 +215,41 @@ body {
 
 .hero-image {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap:30px;
     animation: fadeInRight 1s ease;
+}
+
+/* Basic button styling */
+.download-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.download-btn:hover {
+  background-color: #3367d6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:active {
+  transform: translateY(0);
+}
+
+/* If using Font Awesome icon */
+.download-btn i {
+  margin-right: 8px;
 }
 
 .hero-avatar {

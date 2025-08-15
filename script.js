@@ -78,6 +78,27 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+
+//for download Resume PDF
+//for download Resume PDF
+document.getElementById('pdfDownloadBtn').addEventListener('click', function() {
+  // Create a temporary anchor element
+  const link = document.createElement('a');
+  // Assuming the PDF is in a 'files' directory in your website root
+  link.href = '/Bhavya_Resume.pdf'; // Use a relative path to the file
+  link.download = 'Bhavya jain.pdf'; // The filename you want it to save as
+
+  // Append to body, trigger click, then remove
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  // Optional: Track downloads with analytics
+  console.log('PDF downloaded');
+  // You could add Google Analytics or other tracking here
+});
+
+
 // Observe elements for animation
 document.querySelectorAll('.skill-category, .project-card, .stat').forEach(el => {
     el.style.opacity = '0';
